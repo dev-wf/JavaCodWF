@@ -1,5 +1,6 @@
 package com.dev.dev;
 
+import com.dev.dev.Frames.Inicio;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -18,26 +19,17 @@ public class F1 extends JFrame {
         }
     }
 
-    protected void param() {
-        setTitle("TELA-01");
-        setSize(800, 600);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
-        setVisible(true);
-        setLocationRelativeTo(null);
-
-    }
-
     private void tempo() throws InterruptedException {
         System.out.println("TELA-01");
-
-        for (int i = 1; i <= 10; i++) {
+        Inicio inicio = new Inicio();
+        int i;
+        for (i = 1; i <= 6; i++) {
             Thread.sleep(1 * 1000); // aguarda 5segundos
             System.out.println("CONTADOR: " + i);
-            param();
+            inicio.pg.setValue(i * 20);
 
         }
-        this.dispose();
+        inicio.dispose();
     }
 
 }
