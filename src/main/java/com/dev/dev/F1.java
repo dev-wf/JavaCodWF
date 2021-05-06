@@ -19,6 +19,7 @@ public class F1 extends JFrame {
     }
 
     protected void param() {
+        setTitle("TELA-01");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
@@ -28,7 +29,7 @@ public class F1 extends JFrame {
     }
 
     private void tempo() throws InterruptedException {
-        System.out.println("TELA-1");
+        System.out.println("TELA-01");
 
         for (int i = 1; i <= 10; i++) {
             Thread.sleep(1 * 1000); // aguarda 5segundos
